@@ -21,10 +21,10 @@
     @if ($showModal)
         <div class="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50" x-data
             x-init="$nextTick(() => $refs.searchInput.focus())">
-            <div class="bg-white dark:bg-gray-800 rounded-lg w-full max-w-2xl p-6">
+            <div class="bg-white rounded-lg w-full max-w-2xl p-6">
                 <!-- Header -->
                 <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Search Post</h2>
+                    <h2 class="text-xl font-semibold text-gray-800 ">Search Post</h2>
                     <button wire:click="closeModal"
                         class="text-gray-500 hover:text-gray-700 text-2xl font-bold">&times;</button>
                 </div>
@@ -33,7 +33,7 @@
                 <form wire:submit.prevent="searchSubmit" class="w-full mb-4">
                     <div class="relative">
                         <input type="search" id="searchInput" x-ref="searchInput" placeholder="Search News..."
-                            class="block w-full p-4 ps-10 pr-32 text-sm border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                            class="block w-full p-4 ps-10 pr-32 text-sm border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500"
                             wire:model.live.debounce.300ms="query" />
                         <button type="submit"
                             class="absolute end-2.5 bottom-2.5 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg text-sm px-4 py-2">
@@ -77,7 +77,7 @@
                         @endforeach
                     </ul>
                 @elseif($query)
-                    <p class="text-gray-500 dark:text-gray-400 mt-2">No results found.</p>
+                    <p class="text-gray-500 mt-2">No results found.</p>
                 @endif
             </div>
         </div>

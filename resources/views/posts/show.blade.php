@@ -69,12 +69,11 @@
         </section>
     </article>
 
-
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-gray-900 dark:text-white">Related</h2>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-gray-900">Related</h2>
 
         @foreach ($posts_latest as $post)
-            <div class="w-full mx-auto overflow-hidden flex flex-col md:flex-row mb-8 ">
+            <div class="w-full mx-auto overflow-hidden flex flex-col md:flex-row mb-8">
                 <!-- Gambar -->
                 <div class="w-full md:w-1/4">
                     <img src="{{ !empty($post->cover_url) ? $post->cover_url : asset('img/default-latest.png') }}"
@@ -86,15 +85,15 @@
                 <div class="w-full md:w-2/3 p-4 sm:p-6 flex flex-col justify-between">
                     <div>
                         <div class="text-sm sm:text-base mb-2">
-                            <span class="font-bold text-black dark:text-white">{{ $post->category_name }}</span>
+                            <span class="font-bold text-black">{{ $post->category_name }}</span>
                             <span class="text-gray-500"> — {{ $post->created_at }}</span>
                         </div>
                         <a href="{{ route('post.show', $post->slug) }}">
-                            <h2 class="text-lg sm:text-2xl font-bold text-gray-900 dark:text-white mt-2">
+                            <h2 class="text-lg sm:text-2xl font-bold text-gray-900 mt-2">
                                 {{ $post->title }}
                             </h2>
                         </a>
-                        <p class="text-gray-600 dark:text-gray-400 mt-2 text-sm sm:text-base">
+                        <p class="text-gray-600 mt-2 text-sm sm:text-base">
                             {{ Str::limit($post->description, 100, '...') }}
                         </p>
                     </div>
@@ -105,7 +104,7 @@
                             src="{{ $post->author_avatar ?? asset('img/default-latest.png') }}"
                             alt="{{ $post->author_name }}">
                         <div class="ml-3">
-                            <p class="text-gray-900 dark:text-white font-semibold">{{ $post->author_name }}</p>
+                            <p class="text-gray-900 font-semibold">{{ $post->author_name }}</p>
                             <p class="text-gray-500 text-sm">Author, {{ $post->author_post_count }} published post</p>
                         </div>
                     </div>

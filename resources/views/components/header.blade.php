@@ -50,7 +50,7 @@
         x-transition:enter-start="translate-x-full opacity-0" x-transition:enter-end="translate-x-0 opacity-100"
         x-transition:leave="transition transform duration-300" x-transition:leave-start="translate-x-0 opacity-100"
         x-transition:leave-end="translate-x-full opacity-0"
-        class="fixed inset-0 z-50 bg-gray-100 dark:bg-gray-900 flex flex-col p-6 md:w-1/3 md:ml-auto
+        class="fixed inset-0 z-50 bg-gray-100  flex flex-col p-6 md:w-1/3 md:ml-auto
                overflow-y-auto">
 
         <!-- Close Button -->
@@ -64,7 +64,7 @@
                 <li>
                     <a href="{{ route('home') }}"
                         class="block hover:text-green-600
-              {{ request()->routeIs('home') ? 'text-green-600 font-semibold' : 'text-gray-800 dark:text-white' }}">
+              {{ request()->routeIs('home') ? 'text-green-600 font-semibold' : 'text-gray-800 ' }}">
                         Home
                     </a>
                 </li>
@@ -72,17 +72,16 @@
                 <!-- Dropdown Category -->
                 <li x-data="{ open: false }" class="relative">
                     <button @click="open = !open"
-                        class="w-full flex justify-between items-center text-gray-800 dark:text-white hover:text-green-600">
+                        class="w-full flex justify-between items-center text-gray-800  hover:text-green-600">
                         Categories
                         <span class="material-icons">expand_more</span>
                     </button>
 
-                    <ul x-show="open" x-transition
-                        class="ml-4 mt-2 space-y-2 bg-white dark:bg-gray-800 rounded shadow">
+                    <ul x-show="open" x-transition class="ml-4 mt-2 space-y-2 bg-white rounded shadow">
                         @foreach (App\Models\Category::all() as $category)
                             <li>
                                 <a href="{{ route('category.posts', $category->slug) }}"
-                                    class="block px-3 py-2 text-gray-600 dark:text-gray-200 hover:text-green-500">
+                                    class="block px-3 py-2 text-gray-600  hover:text-green-500">
                                     {{ $category->name }}
                                 </a>
                             </li>
@@ -93,7 +92,7 @@
                 <!-- Dropdown Arsip -->
                 <li x-data="{ open: false }" class="relative">
                     <button @click="open = !open"
-                        class="w-full flex justify-between items-center text-gray-800 dark:text-white hover:text-green-600">
+                        class="w-full flex justify-between items-center text-gray-800 hover:text-green-600">
                         Arsip
                         <span class="material-icons">expand_more</span>
                     </button>
