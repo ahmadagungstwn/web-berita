@@ -9,7 +9,7 @@
 
     <!-- Social (desktop) -->
     <nav aria-label="Social media links">
-        <ul class="flex items-center space-x-4">
+        <ul class="flex items-center md:space-x-2">
             <li>
                 <a class="text-gray-900 hover:text-black" href="#" aria-label="Twitter">
                     <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

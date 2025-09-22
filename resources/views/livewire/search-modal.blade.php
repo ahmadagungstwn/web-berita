@@ -1,4 +1,4 @@
-<div>
+<div class="mr-2">
     <!-- Button untuk buka modal (mirip search bar) -->
     <button wire:click="openModal" class="w-full max-w-md mx-auto">
         <div
