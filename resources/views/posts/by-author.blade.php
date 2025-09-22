@@ -62,7 +62,7 @@
         </div>
 
         {{-- Pagination --}}
-        <div class="mt-12">
+        <div class="mt-12 bg-white">
             @if (method_exists($posts, 'links'))
                 {{ $posts->links() }}
             @endif
