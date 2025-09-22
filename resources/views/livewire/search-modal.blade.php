@@ -2,16 +2,20 @@
     <!-- Button untuk buka modal (mirip search bar) -->
     <button wire:click="openModal" class="w-full max-w-md mx-auto">
         <div
-            class="flex items-center justify-between border border-gray-300 rounded-lg shadow-sm pl-2 pr-24 py-3 cursor-pointer hover:ring-1 hover:ring-green-500 transition">
+            class="flex items-center justify-between border border-gray-300 rounded-lg shadow-sm pl-2 pr-1 md:pr-24 py-2 md:py-3 cursor-pointer hover:ring-1 hover:ring-green-500 transition">
+
             <div class="flex items-center space-x-2">
+                <!-- Icon search -->
                 <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"></path>
                 </svg>
-                <span class="text-gray-400">Search News...</span>
+                <!-- Text hanya muncul di md+ -->
+                <span class="text-gray-400 hidden md:inline">Search News...</span>
             </div>
         </div>
     </button>
+
 
     <!-- Modal -->
     @if ($showModal)

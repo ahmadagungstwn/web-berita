@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
                     return [
                         'year' => $date->year,
                         'month' => $date->month,
-                        'month_name' => \Carbon\Carbon::create()->month($date->month)->format('F'),
+                        'month_name' => \Carbon\Carbon::create()->month((int) $date->month)->format('F'),
                     ];
                 });
 
