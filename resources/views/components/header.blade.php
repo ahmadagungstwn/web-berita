@@ -68,6 +68,16 @@
                         Home
                     </a>
                 </li>
+                <li>
+                    <a href="#" class="block hover:text-green-600">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block hover:text-green-600">
+                        Contact
+                    </a>
+                </li>
 
                 <!-- Dropdown Category -->
                 <li x-data="{ open: false }" class="relative">
