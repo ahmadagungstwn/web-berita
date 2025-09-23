@@ -29,7 +29,7 @@
                                             </h3>
                                         </a>
                                         <p class="mt-2 text-gray-500">
-                                            {{ Str::limit($post->description, 100, '...') }}
+                                            {!! Str::markdown(Str::limit($post->description, 100, '...')) !!}
                                         </p>
                                         <a href="{{ route('posts.byAuthor', $post->author_slug) }}"
                                             class="flex items-center mt-6">
