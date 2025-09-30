@@ -24,7 +24,7 @@
                                 </h3>
                             </a>
                             <p class="text-gray-600 mb-6">
-                                {{ Str::limit($post->description, 100, '...') }}
+                                {{ Str::limit(strip_tags(Str::markdown($post->description)), 100, '...') }}
                             </p>
                             <a href="{{ route('posts.byAuthor', $post->author_slug) }}"
                                 class="flex items-center not-italic">

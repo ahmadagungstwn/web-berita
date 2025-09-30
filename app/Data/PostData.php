@@ -42,7 +42,7 @@ class PostData extends Data
             author_occupation: $post->author->occupation,
             author_avatar: $post->author->avatar ? asset('storage/' . $post->author->avatar) : null,
             author_post_count: $post->author->posts()->count(),
-            title: Str::limit($post->title, 50),
+            title: ($post->title),
             slug: $post->slug,
             is_featured: $post->status_post,
             description: $post->description,

@@ -38,7 +38,7 @@
                         </h2>
 
                         <p class="text-lg text-gray-600 leading-snug">
-                            {{ Str::limit($post->description, 100) }}
+                            {{ Str::limit(strip_tags(Str::markdown($post->description)), 500, '...') }}
                         </p>
 
                         {{-- Author --}}
