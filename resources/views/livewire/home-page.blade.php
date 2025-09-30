@@ -92,7 +92,7 @@
                     @foreach ($posts_hukum as $post)
                         <article class="flex items-center bg-gray-50 p-4 rounded-lg shadow-sm">
                             <img class="w-24 h-24 rounded-lg object-cover"
-                                src="{{ !empty($post->cover_url) ? $post->cover_url : asset('img/default-post.png') }}"
+                                src="{{ !empty($post->cover_url) ? $post->cover_url : asset('img/default-hukum.png') }}"
                                 alt="{{ $post->title }}" />
                             <div class="ml-4">
                                 <div class="text-sm mb-2">

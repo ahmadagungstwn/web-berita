@@ -17,8 +17,8 @@ class HomePage extends Component
         );
 
         $posts_popular = PostData::collect(
-            // Post::query()->where('status_post', 'popular')->latest()->take(9)->get()
-            Post::query()->where('status_post', 'popular')->oldest()->take(9)->get()
+            Post::query()->where('status_post', 'popular')->latest()->take(9)->get()
+            // Post::query()->where('status_post', 'popular')->oldest()->take(9)->get()
         );
 
         $posts_latest = PostData::collect(
