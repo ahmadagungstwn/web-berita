@@ -11,7 +11,6 @@ class SearchModal extends Component
     public $results = [];
     public $showModal = false;
 
-    // Jalankan pencarian live saat query berubah
     public function updatedQuery()
     {
         $this->results = Post::where('title', 'like', '%' . $this->query . '%')
@@ -19,11 +18,9 @@ class SearchModal extends Component
             ->get();
     }
 
-    // Saat submit form, modal tetap terbuka dan hasil ditampilkan
     public function searchSubmit()
     {
         $this->results = Post::where('title', 'like', '%' . $this->query . '%')->get();
-        // jangan tutup modal
     }
 
     public function openModal()
